@@ -1,5 +1,5 @@
 # chipled
-Toggle CHIPs status LED through REST. Read more about CHIP at the Next Thing Co (NTC) website: http://getchip.com/pages/chip
+Toggle CHIPs status LED through REST via Node.js. Read more about CHIP at the Next Thing Co (NTC) website: http://getchip.com/pages/chip
 
 Thought I'd make a quick test running node.js on the chip and what better way than to blink the on-board LED which is accessible on the i2c-bus :)
 
