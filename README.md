@@ -2,7 +2,8 @@
 Toggle CHIPs status LED through REST. Read more about CHIP at the Next Thing Co (NTC) website: http://getchip.com/pages/chip
 
 Thought I'd make a quick test running node.js on the chip and what better way than to blink the on-board LED which is accessible on the i2c-bus :)
-First make some binaries to toggle the LED:s by following the following steps (taken from http://wiki.geeky-boy.com/w/index.php?title=CHIP_Proj1)
+
+Clone this repository and cd into the repository folder, then lets make some binaries to toggle the LED:s (from http://wiki.geeky-boy.com/w/index.php?title=CHIP_Proj1)
 ```
 sudo apt-get update  # Repair things that that seem to be a little sick.
 sudo apt-get upgrade
