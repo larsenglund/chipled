@@ -1,0 +1,11 @@
+{
+  "name": "CHIPled",
+  "version": "0.0.1",
+  "description": "Toggle CHIPs status LED through REST",
+  "dependencies": {
+    "body-parser": "1.14.1",
+    "express": "4.13.3",
+    "request": "^2.65.0"
+  },
+  "author": "Lars Englund <lars.englund@gmail.com> (http://en.gravatar.com/larsenglund)"
+}
