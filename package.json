@@ -5,7 +5,12 @@
   "dependencies": {
     "body-parser": "1.14.1",
     "express": "4.13.3",
-    "request": "^2.65.0"
+    "request": "^2.65.0",
+    "i2c": "0.2.3"
   },
-  "author": "Lars Englund <lars.englund@gmail.com> (http://en.gravatar.com/larsenglund)"
+  "author": "Lars Englund <lars.englund@gmail.com> (http://en.gravatar.com/larsenglund)",
+  "contributors": [{
+    "name": "Troy Dack",
+    "email": "troy@dack.com.au"
+  }],
 }

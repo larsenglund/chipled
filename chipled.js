@@ -4,8 +4,9 @@ var express     = require('express'),
     port        = 3700,
     bodyParser  = require('body-parser'),
     router      = express.Router(),
-    exec        = require('child_process').exec;
-
+    i2c         = require('i2c'),
+    address     = 0x34,
+    wire        = new i2c(address, {device: '/dev/i2c-0'});
 
 console.log('Node version: ' + process.version);
 
@@ -14,19 +15,19 @@ console.log('Node version: ' + process.version);
 app.use(bodyParser.json());       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({   // to support URL-encoded bodies
   extended: true
-})); 
+}));
 
 router.get('/', function(req, res) {
-  res.json({ message: 'It works!' });   
+  res.json({ message: 'It works!' });
 });
 
 router.get('/on', function(req, res) {
-  exec("./on", function (error, stdout, stderr) {});
-  res.json({ led: 'on' });   
+  wire.writeBytes(0x93, [0x01], function(err) {});
+  res.json({ led: 'on' });
 });
 
 router.get('/off', function(req, res) {
-  exec("./off", function (error, stdout, stderr) {});
+  wire.writeBytes(0x93, [0x00], function(err) {});
   res.json({ led: 'off' });   
 });
 
