@@ -7,20 +7,16 @@ Clone this repository and cd into the repository folder, then make some binaries
 ```
 sudo apt-get update  # Repair things that that seem to be a little sick.
 sudo apt-get upgrade
-sudo apt-get install -f locales
-sudo locale-gen en_US en_US.UTF-8
-sudo dpkg-reconfigure locales    # Select "en_US" locales.
-sudo apt-get install gcc make  # Get the C compiler
+sudo apt-get install build-essentials
 
-sudo gcc -o on on.c  # Compile
-sudo gcc -o off off.c
-sudo chmod +s on  # Allow executables to run with root privilage
-sudo chmod +s off
+# Add i2c to groups for user chip
+sudo usermod -a -G i2c chip
+
 ```
-Install node.js, npm and dependecies for the project
+Install node.js and npm by following the instructions at https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions to get the most up to date LTS release.
+
+Then install the dependencies
 ```
-sudo apt-get install nodejs
-sudo apt-get install npm
 npm install
 ```
 And start the server
